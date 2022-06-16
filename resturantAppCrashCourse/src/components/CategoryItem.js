@@ -2,20 +2,21 @@ import { View, Text , StyleSheet, Image} from 'react-native'
 import React from 'react'
 import {elevation} from '../common/style'
 
-export default function CategoryItem() {
+export default function CategoryItem(props) {
+    const {name, imageUrl} = props
+
   return (
     <View style={[styles.container, styles.elevation]}>
         <View style={styles.imageContainer}>
             <Image 
-                source={require('../assets/images/pizza.png')}
+                source={imageUrl}
                 style={styles.image}
             />
         </View>
-      <Text style={styles.text}>Burger</Text>
+      <Text style={styles.text}>{name}</Text>
     </View>
   )
 }
-
 
 const styles = StyleSheet.create({
     elevation,
