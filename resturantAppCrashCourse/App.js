@@ -7,9 +7,22 @@ import CategoryItem from './src/components/CategoryItem';
 export default function App(){
   return (
     <View style={styles.container}>
-    <Header/>
-    <Search />
-    <CategoryItem />
+      <Header/>
+      <Search />
+      <CategoryItem
+        name='burger'
+        imageUrl = {require('./src/assets/images/hamburger.png')}
+      />
+
+      <CategoryItem
+        name='pizza'
+        imageUrl = {require('./src/assets/images/pizza.png')}
+      />
+
+      <CategoryItem
+        name='steak'
+        imageUrl = {require('./src/assets/images/meat.png')}
+      />
     <StatusBar />
     </View>
 
