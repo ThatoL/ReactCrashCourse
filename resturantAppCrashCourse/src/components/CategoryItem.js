@@ -3,10 +3,10 @@ import React from 'react'
 import {elevation} from '../common/style'
 
 export default function CategoryItem(props) {
-    const {name, imageUrl} = props
+    const {name, imageUrl, index} = props
 
   return (
-    <View style={[styles.container, styles.elevation]}>
+    <View style={[styles.container, styles.elevation, index==0?{marginLeft:25}:{marginLeft:15}]}>
         <View style={styles.imageContainer}>
             <Image 
                 source={imageUrl}
@@ -26,7 +26,6 @@ const styles = StyleSheet.create({
         borderRadius: 50,
         marginVertical: 15,
         backgroundColor: 'white',
-        marginHorizontal: 25,
         alignItems: 'center',
         justifyContent: 'center'
     },
