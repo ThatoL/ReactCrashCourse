@@ -1,10 +1,11 @@
 import {View , Text, StyleSheet} from 'react-native';
 import { StatusBar } from 'expo-status-bar';
+import Header from './src/components/Header';
 
 export default function App(){
   return (
     <View style={styles.container}>
-    <Text>Hello World</Text>
+    <Header/>
     <StatusBar />
     </View>
 
@@ -12,10 +13,10 @@ export default function App(){
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'white',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
+  // container: {
+  //   flex: 1,
+  //   backgroundColor: 'white',
+  //   alignItems: 'center',
+  //   justifyContent: 'center'
+  // }
 })
