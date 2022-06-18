@@ -6,7 +6,7 @@ import Search from './src/components/Search';
 import CategoryItem from './src/components/CategoryItem';
 
 export default function App(){
-  const [term , SetTerm] = useState('cake');
+  const [term , SetTerm] = useState('');
   const commonCategories = [
     {
       name:'cake',
@@ -37,7 +37,9 @@ export default function App(){
   return (
     <View style={styles.container}>
       <Header/>
-      <Search />
+      <Search 
+        setTerm={SetTerm}
+      />
       <FlatList
         keyExtractor={(category) => category.name} 
         horizontal
