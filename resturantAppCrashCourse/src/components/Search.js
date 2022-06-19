@@ -21,7 +21,7 @@ export default function Search(props) {
         <TextInput
             //2 way binding
             value={input}
-            //updates state when text changes
+
             onChangeText={(text)=>{setInput(text)}}
             onEndEditing={()=>{return (handleEndEditing())}}
             placeholder='Restaurant, Food'
