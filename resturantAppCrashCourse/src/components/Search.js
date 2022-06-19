@@ -10,6 +10,7 @@ export default function Search(props) {
     const handleEndEditing = () => {
         if (!input) return
         setTerm(input)
+        setInput('')
     }
 
   return (
@@ -18,6 +19,8 @@ export default function Search(props) {
             size={25}
         />
         <TextInput
+            //2 way binding
+            value={input}
             onChangeText={(text)=>{setInput(text)}}
             onEndEditing={()=>{return (handleEndEditing())}}
             placeholder='Restaurant, Food'
