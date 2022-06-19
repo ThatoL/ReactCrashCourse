@@ -5,11 +5,12 @@ import {elevation} from '../common/style'
 
 export default function Search(props) {
     const [input , setInput] = useState('');
-    const { setTerm} = props;
+    const { setTerm } = props;
 
     const handleEndEditing = () => {
-        if (!input) return
+        if (!input) return;
         setTerm(input)
+        setInput('')
     }
 
   return (
@@ -18,6 +19,9 @@ export default function Search(props) {
             size={25}
         />
         <TextInput
+            //2 way binding
+            value={input}
+            //updates state when text changes
             onChangeText={(text)=>{setInput(text)}}
             onEndEditing={()=>{return (handleEndEditing())}}
             placeholder='Restaurant, Food'
